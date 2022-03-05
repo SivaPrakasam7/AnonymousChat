@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyAAkR-yu5HT0IuAD-z4m7OR2tAk4W4Ujms",
-  authDomain: "anonymouschats.firebaseapp.com",
-  projectId: "anonymouschats",
-  storageBucket: "anonymouschats.appspot.com",
-  messagingSenderId: "73136863083",
-  appId: "1:73136863083:web:0c6ed811a0e48b0b813e2e",
+  apiKey: import.meta.env.VITE_APP_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_APP_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_APP_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_APP_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_APP_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_APP_ID,
 };

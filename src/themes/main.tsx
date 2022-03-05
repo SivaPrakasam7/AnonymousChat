@@ -11,7 +11,10 @@ export const Main = ({ children }: child) => {
   const [mode, setMode] = React.useState(
     localStorage.getItem("theme") === "dark"
   );
-  const changeMode = () => setMode(!mode);
+  const changeMode = () => {
+    localStorage.setItem("theme", mode ? "light" : "dark");
+    setMode(!mode);
+  };
   const theme = React.useMemo(
     () =>
       Mui.createTheme({

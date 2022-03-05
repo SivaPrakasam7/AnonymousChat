@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "preview": "vite preview",
+    "deploy:dev": "firebase preview",
+    "deploy:prod": "firebase deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.8.1",
@@ -14,10 +18,15 @@
     "@mui/lab": "^5.0.0-alpha.70",
     "@mui/material": "^5.4.3",
     "firebase": "^9.6.7",
+    "formik": "^2.2.9",
+    "formik-mui": "^4.0.0-alpha.3",
+    "notistack": "^2.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-error-boundary": "^3.1.4",
     "react-router-dom": "^6.2.1",
-    "reactfire": "^4.2.1"
+    "reactfire": "^4.2.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
