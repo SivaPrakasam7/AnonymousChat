@@ -26,11 +26,11 @@ export const Main = ({ children }: child) => {
   );
 
   return (
-    <ThemeContext.Provider value={{ mode, changeMode }}>
-      <Mui.ThemeProvider theme={theme}>
+    <Mui.ThemeProvider theme={theme}>
+      <ThemeContext.Provider value={{ mode, changeMode }}>
         <Themes.CssBaseline.Main />
         {children}
-      </Mui.ThemeProvider>
-    </ThemeContext.Provider>
+      </ThemeContext.Provider>
+    </Mui.ThemeProvider>
   );
 };

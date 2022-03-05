@@ -13,8 +13,10 @@ const tobase64 = (file: Blob) =>
 export const ImageSelector = ({
   label,
   name,
+  disabled,
   ...props
-}: Required<Pick<Mui.TextFieldProps, "label" | "name">> & Mui.AvatarProps) => {
+}: Required<Pick<Mui.TextFieldProps, "label" | "name" | "disabled">> &
+  Mui.AvatarProps) => {
   const { setFieldValue, values, errors, touched } =
     Formik.useFormikContext<{ [key: string]: string }>();
   const ifError = Boolean(touched[name] && errors[name]);
@@ -28,6 +30,7 @@ export const ImageSelector = ({
       sx={{ width: "fit-content" }}
     >
       <input
+        disabled={disabled}
         accept="image/*"
         type="file"
         name={name}

@@ -20,9 +20,29 @@ interface child {
 }
 
 // Main interfaces
-interface chat {
-  chatId: string;
-  username?: string;
+interface user {
+  uid: string;
+  name: string;
+  profile: string;
+  createdTime: number;
+  signedIn: "true" | "false";
+}
+interface peerTopeer {
+  peerId: string;
+  clients: string[];
+  createdTime: number;
+  messages: messageBlock[];
+}
+interface messageBlock {
+  previousHash: string;
+  hash: string;
+  uid: string;
+  name: string;
+  profile: string;
+  timestamp: number;
   message: string;
-  time: string;
+  // medias: medias;
+}
+interface medias {
+  image: string[];
 }

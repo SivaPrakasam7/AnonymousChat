@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "build:dev": "vite build --mode development",
     "build:prod": "vite build --mode production",
@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.4.2",
     "@mui/lab": "^5.0.0-alpha.70",
     "@mui/material": "^5.4.3",
+    "crypto-js": "^4.1.1",
     "firebase": "^9.6.7",
     "formik": "^2.2.9",
     "formik-mui": "^4.0.0-alpha.3",
@@ -29,6 +30,8 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/lodash": "^4.14.179",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
